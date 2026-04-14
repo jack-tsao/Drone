@@ -150,8 +150,5 @@ If you see `FCU: ArduCopter` and heartbeat messages, the connection is working. 
 --- 
 
 ## NPU Acceleration (Optional)
-To be able to run yolo detection on the drone using the Qualcomm AI accelerator, you will need to follow this guide: 
-
-https://github.com/ADVANTECH-Corp/EdgeAI_Workflow/blob/main/ai_system/qualcomm/aom-dk2721/linux/object_detection_demo-using-qc_ai_hub.md
-
-In case of using Ubuntu with USB camera (instead of Yocto with MIPI camera), you will need to modify yolov8_cam_ai_hub.sh script to be compatible with Ubuntu and your camera output format.
+For running YOLOv8 on the Qualcomm NPU, see the [NPU Deployment Guide](NPU-deployment-guide.md) 
+in this repository. A pre-quantized model is included in `model/yolov8_det.tflite`.
