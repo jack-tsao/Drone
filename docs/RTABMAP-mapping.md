@@ -185,20 +185,28 @@ rtabmap
 Then: **File > Open Database** and select the `.db` file.
 
 ### Export as OctoMap (.bt)
-
+ 
 Inside rtabmap: **Window > Preferences** > find and enable the **OctoMap** checkbox. Then **File > Export OctoMap**.
-
-### View in RViz2
-
+ 
+### View OctoMap in RViz2
+ 
+Start the OctoMap server with `frame_id:=map` so RViz2 doesn't require manually changing the fixed frame:
+ 
+```bash
+ros2 run octomap_server octomap_server_node --ros-args -p octomap_path:=/home/<USERNAME>/.ros/maps/<MAPNAME>.bt -p frame_id:=map
+```
+ 
+Then open RViz2:
+ 
 ```bash
 rviz2
 ```
-
+ 
 - **Add > By Topic > PointCloud2**
-- Change the **Fixed Frame** to `map`
+- Open PointCloud2 dropdown > open Topic dropdown > change `durability policy` to `Transient Local` 
 
+ 
 > If topics don't appear in RViz: set **Reliability** to `Reliable` and **Durability** to `Transient Local` in the topic settings.
-
 ---
 
 ## 6. Troubleshooting
