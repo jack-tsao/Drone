@@ -19,7 +19,10 @@ The Qualcomm HTP NPU requires models in TensorFlow Lite format with INT8 quantiz
 
 Full quantization guide: [Advantech EdgeAI Workflow](https://github.com/ADVANTECH-Corp/EdgeAI_Workflow/blob/main/ai_system/qualcomm/aom-dk2721/linux/object_detection_demo-using-qc_ai_hub.md)
 
-> **Shortcut:** A pre-quantized `yolov8_det.tflite` is included in the `model/` directory of this repository. You can skip the quantization process and use it directly.
+> **Shortcut:** A pre-quantized `yolov8_det.tflite` and `labels.txt` are included in the `model/` directory of this repository. Copy them to the directory the scripts expect:
+> ```bash
+> cp model/yolov8_det.tflite model/labels.txt ~/ai-hub/EdgeAI_Workflow/ai_system/qualcomm/aom-dk2721/linux/script/
+> ```
 
 The model file is placed on the board alongside a `labels.txt` file containing the 80 COCO class names (included in `scripts/`).
 

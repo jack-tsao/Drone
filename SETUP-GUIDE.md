@@ -222,10 +222,11 @@ These are pre-configured via Mission Planner. Do not change them unless you know
 | Parameter | Value | Purpose |
 |-----------|-------|---------|
 | `RC_OVERRIDE_TIME` | 3 | Seconds before RC override expires |
+| `ARMING_CHECK` | 0 | Disable pre-arm safety checks |
 | `FS_THR_ENABLE` | 0 | Throttle failsafe disabled |
 | `SYSID_MYGCS` | 1 | Must match MAVROS `system_id` (verify: `ros2 param get /mavros system_id`) |
 | `BRD_SAFETY_MASK` | 0 | Bypass safety switch requirement |
-| `MOT_SPIN_ARM` | 0.10 | Motor spin when armed (10%) |
+| `MOT_SPIN_ARM` | 0.15 | Motor spin when armed (15%) |
 | `MOT_SPIN_MIN` | 0.15 | Minimum motor spin in flight (15%) |
 
 ---
