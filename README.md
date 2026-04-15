@@ -51,9 +51,9 @@ Same model, same camera, same drone. The only difference is where the inference 
 │   ├── intelCAM_cpu_demo.py           # CPU inference - Intel RealSense D435i
 │   ├── intelCAM_npu_demo.py           # NPU inference - Intel RealSense D435i
 │   ├── anker_MJPEG_yolo_cam_ai_hub.sh # GStreamer shell script - AnkerWork (MJPEG)
-│   ├── intel_YUY2_yolo_cam_ai_hub.sh  # GStreamer shell script - Intel RealSense (YUYV)
-│   └── labels.txt                     # COCO class labels (80 classes)
+│   └── intel_YUY2_yolo_cam_ai_hub.sh  # GStreamer shell script - Intel RealSense (YUYV)
 └── model/
+    ├── labels.txt                     # COCO class labels (80 classes)
     └── yolov8_det.tflite              # Quantized YOLOv8n model for NPU (see below)
 ```
 
