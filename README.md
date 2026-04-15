@@ -100,9 +100,9 @@ https://github.com/ADVANTECH-Corp/EdgeAI_Workflow/blob/main/ai_system/qualcomm/a
 
 | Metric | CPU | NPU |
 |--------|-----|-----|
-| Inference FPS | ~3-5 | ~30+ |
+| Inference FPS | ~1.5 | ~30+ |
 | Board power draw | ~8.5W | ~7.6W |
-| Response latency | ~200-300ms (noticeable) | ~33ms (instant) |
+| Response latency | ~200-300ms (noticeable) | ~25ms (instant) |
 | Model size | ~12 MB (FP32) | ~3.3 MB (INT8) |
 
 Idle board power: 5.8W. Board maximum rated: 11W.
@@ -142,10 +142,11 @@ These must be set in Mission Planner before running the demo:
 | Parameter | Value | Purpose |
 |-----------|-------|---------|
 | RC_OVERRIDE_TIME | 3 | RC override timeout (seconds) |
+| ARMING_CHECK | 0 | Disable pre-arm safety checks |
 | FS_THR_ENABLE | 0 | Disable throttle failsafe |
 | SYSID_MYGCS | 1 | Must match MAVROS system_id |
 | BRD_SAFETY_MASK | 0 | Bypass safety switch |
-| MOT_SPIN_ARM | 0.10 | Motor spin when armed (10%) |
+| MOT_SPIN_ARM | 0.15 | Motor spin when armed (15%) |
 | MOT_SPIN_MIN | 0.15 | Minimum motor spin (15%) |
 
 ---
