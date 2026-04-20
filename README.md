@@ -96,23 +96,29 @@ https://github.com/ADVANTECH-Corp/EdgeAI_Workflow/blob/main/ai_system/qualcomm/a
 
 ---
 
-## Switching YOLO Models
+## Available Models
 
-The `model/` directory contains pre-quantized INT8 TFLite models for the Hexagon NPU:
+Pre-quantized INT8 TFLite models for the Hexagon NPU are included in the `model/` directory:
 
-| File | Architecture | Parameters | Size |
-|------|-------------|------------|------|
-| `yolov8n_det.tflite` | YOLOv8 nano | 3.2M | 3.3 MB |
-| `yolov8s_det.tflite` | YOLOv8 small | 11.2M | ~11 MB |
-| `yolov8m_det.tflite` | YOLOv8 medium | 25.9M | ~26 MB |
-| `yolov8l_det.tflite` | YOLOv8 large | 43.7M | ~44 MB |
-| `yolov11n_det.tflite` | YOLOv11 nano | 2.6M | 2.9 MB |
-| `yolov11s_det.tflite` | YOLOv11 small | 9.4M | ~9 MB |
+| File | Architecture | Size |
+|------|-------------|------|
+| `yolov8n_det.tflite` | YOLOv8 nano | 3.3 MB |
+| `yolov8s_det.tflite` | YOLOv8 small | 11.0 MB |
+| `yolov8m_det.tflite` | YOLOv8 medium | 25.2 MB |
+| `yolov8l_det.tflite` | YOLOv8 large | 42.4 MB |
+| `yolov11n_det.tflite` | YOLOv11 nano | 2.8 MB |
+| `yolov11s_det.tflite` | YOLOv11 small | 9.5 MB |
 
-The default is `yolov8n_det.tflite`. To switch models, change the `MODEL_FILE` variable at the top of any NPU script:
+The default is `yolov8n_det.tflite`. To use a different model, change the `MODEL_FILE` variable at the top of any NPU script:
 
 ```python
-MODEL_FILE = "yolov8n_det.tflite"  # ← change this
+MODEL_FILE = "yolov8s_det.tflite"  # ← change this
+```
+
+Then copy the model to the scripts directory:
+
+```bash
+cp model/yolov8s_det.tflite ~/ai-hub/EdgeAI_Workflow/ai_system/qualcomm/aom-dk2721/linux/script/
 ```
 
 ---
