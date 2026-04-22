@@ -282,7 +282,7 @@ def main():
     if NO_DISPLAY:
         # No display: just tensor appsink + fakesink for inference branch
         pipeline_str = (
-            'v4l2src device="/dev/video2" '
+            f'v4l2src device="{CAMERA_DEVICE}" '
             '! image/jpeg,width=640,height=480 '
             '! jpegparse ! jpegdec ! videoconvert '
             '! video/x-raw,format=NV12,width=640,height=480 '
@@ -299,7 +299,7 @@ def main():
     else:
         # Display: original shell script pipeline + tensor appsink tapped off
         pipeline_str = (
-            'v4l2src device="/dev/video2" '
+            f'v4l2src device="{CAMERA_DEVICE}" '
             '! image/jpeg,width=640,height=480 '
             '! jpegparse ! jpegdec ! videoconvert '
             '! video/x-raw,format=NV12,width=640,height=480 '
