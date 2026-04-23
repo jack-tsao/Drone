@@ -17,8 +17,8 @@ Built for Japan IT Week 2026 at the Advantech booth to demonstrate the differenc
 A camera watches the scene. When the YOLOv8 model detects a **clock**, the drone motors speed up. Move the clock left or right and the drone yaws to follow. Remove the clock and the motors drop back to idle.
 
 Two versions of the same demo:
-- **CPU version** - YOLOv8 runs on the ARM Cortex-A78 cores (~3-5 FPS, noticeable lag)
-- **NPU version** - YOLOv8 runs on the Hexagon HTP NPU (~30+ FPS, real-time response)
+- **CPU version** - YOLOv8n runs on the ARM Cortex-A78 cores (1.3 FPS, 600-700ms latency)
+- **NPU version** - YOLOv8n runs on the Hexagon HTP NPU (110.3 FPS, real-time response)
 
 Same model, same camera, same drone. The only difference is where the inference runs.
 
@@ -129,9 +129,9 @@ cp model/yolov8s_det.tflite ~/ai-hub/EdgeAI_Workflow/ai_system/qualcomm/aom-dk27
 
 | Metric | CPU | NPU |
 |--------|-----|-----|
-| Inference FPS | ~1.5 | ~30+ |
+| Inference FPS | ~1.3 | ~110.3 |
 | Board power draw | ~8.5W | ~7.6W |
-| Response latency | ~200-300ms (noticeable) | ~25ms (instant) |
+| Response latency | ~600-700ms (noticeable) | ~25ms (instant) |
 | Model size | ~12 MB (FP32) | ~3.3 MB (INT8) |
 
 Idle board power: 5.8W. Board maximum rated: 11W.
