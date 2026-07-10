@@ -1,0 +1,1 @@
+Due to applicable restrictions, we are unable to provide the model files online. Please refer to the Model Quantization section in main README.md and follow the instructions provided there to obtain the required model.
